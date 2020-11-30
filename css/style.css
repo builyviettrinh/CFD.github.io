@@ -3,7 +3,158 @@
     padding: 0;
     box-sizing: border-box;
 }
- html, body {
-     font-family: ;
-     font-size: ;
- }
+
+html,
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+
+/* global  */
+
+.container-fluid {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* header  */
+
+header {
+    background-color: #121314;
+}
+
+header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    color: #fff;
+    position: relative;
+}
+
+.nav ul {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav ul li {
+    list-style: none;
+    display: inline;
+    padding: 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav .lang__current {
+    color: #fff;
+}
+
+
+/* slide  */
+
+.slider {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.slider__images {
+    width: 100%;
+    height: 100%;
+}
+
+.slider__images-item {
+    width: 100%;
+    height: 100%;
+}
+
+.slider__images img {
+    width: 100%;
+    height: 100%;
+}
+
+.icon {
+    width: 24px;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.slider__images-item .text {
+    color: #bea67c;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.text h2 {
+    margin-bottom: 20px;
+}
+
+.text a.btn {
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 20px;
+    padding: 16px 52px;
+    display: flex;
+}
+
+.slider__bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* background-color: #fff; */
+    width: 100%;
+}
+
+.paging {
+    display: flex;
+    align-items: center;
+}
+
+.paging span {
+    font-size: 43.81px;
+    color: #bea67c;
+}
+
+.paging .list {
+    display: flex;
+}
+
+.paging .list li {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #303030;
+    margin: 0 8px;
+}
+
+.paging .list li:first-child {
+    background-color: #bea67c;
+}
+
+.paging::before {
+    content: "";
+    width: 42px;
+    height: 4px;
+    background: #bea67c;
+    margin-right: 14px;
+}
