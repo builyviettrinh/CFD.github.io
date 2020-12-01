@@ -281,14 +281,6 @@ header .nav {
     height: 100%;
     display: block;
 }
-.item2 {    
-    grid-row: 2 / 3;
-}
-
-
-/* photo  */
-.photo_content {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr;
-    gap: 10px;
+.item2 {
+    grid-row: 1 / 3;
 }
