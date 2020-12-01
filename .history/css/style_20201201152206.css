@@ -16,8 +16,8 @@ body {
     margin: 0 auto;
 }
 .container{
-    width: 70%;
-    margin: 30px auto;
+    width: 80%;
+    margin: 20px auto;
 }
 
 .hidden {
@@ -193,44 +193,7 @@ header .nav {
 /* furniture */
 .furniture_content{
     display: flex;
-    text-align: center;
-    justify-content: space-between;
 }
 .fur_image {
-    width: 200px;
-}
-.fur_image img {
-    width: 100%;
-}
-
-/* quality  */
-.quality_content {
-    display: flex;
-    justify-content: space-around;
-}
-.quality_item{
-    width: 100px;
-    height: 100px;
-    position: relative;
-}
-.quality_item img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
-.quality_item i {
-    display: block;
-    border-radius: 50%;
-    background-color: #bea67c;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: #fff;
-    padding: 10px;
-    transform: translate(-50%,-50%);
-
-}
-.quality_item a:hover {
-    color: #121314;
+    width: 20px;
 }

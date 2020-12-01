@@ -221,15 +221,14 @@ header .nav {
 }
 .quality_item i {
     display: block;
+    width: 84px;
+    height: 84px;
     border-radius: 50%;
     background-color: #bea67c;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     color: #fff;
-    padding: 10px;
-    transform: translate(-50%,-50%);
-
 }
 .quality_item a:hover {
     color: #121314;
