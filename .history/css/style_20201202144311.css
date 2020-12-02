@@ -359,12 +359,15 @@ header .nav {
     grid-row: 1 / 3;
 }
 
+
 /* news  */
+
 .news_content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px 15px;
+    gap: 20px 30px;
 }
+
 .news_image img {
     width: 100%;
     height: 100%;
@@ -381,9 +384,9 @@ header .nav {
 }
 
 .photo_item img {
+    display: block;
     height: 100%;
     width: 100%;
-    display: block;
 }
 
 .photo2 {

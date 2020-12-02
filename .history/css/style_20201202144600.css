@@ -381,9 +381,9 @@ header .nav {
 }
 
 .photo_item img {
+    display: block;
     height: 100%;
     width: 100%;
-    display: block;
 }
 
 .photo2 {
