@@ -1,3 +1,19 @@
-.hidden {
-    display: none;
-}
+// test tool
+// .hidden {
+//     display: none;
+// }
+//không chứa code css, chỉ chứa đường dẫn tới các file con
+//Base
+@import './Base/reset';
+//Helper
+@import './Helper/variables';
+@import './Helper/mixin';
+//Vendor
+//Components
+@import './Components/button';
+//Imports
+@import './Imports/core/bootrap_mini';
+
+//Pages
+@import './Pages/home';
+// Theme
