@@ -132,8 +132,7 @@ table {
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .container {
@@ -194,18 +193,11 @@ a.bnt_learnMore {
   border: 2px solid #fff;
   font-size: 20px;
   padding: 16px 52px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   text-transform: uppercase;
   cursor: pointer;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
   /* position: relative; */
 }
@@ -215,9 +207,7 @@ a.bnt_learnMore {
     width: 100%;
 } */
 .btn:hover:after {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-  -webkit-transition: 0.3s;
+  transform: translateX(0%);
   transition: 0.3s;
 }
 
@@ -225,7 +215,6 @@ a.bnt_learnMore {
   color: #121314;
   background-color: #fff;
   border: 2px solid #121212;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
@@ -252,15 +241,9 @@ header {
 }
 
 header .nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   height: 100%;
   /* padding: 20px 0; */
   color: #fff;
@@ -270,10 +253,7 @@ header .nav {
 header .nav .menu .ul {
   position: absolute;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  transform: translateX(-50%);
   display: flex;
 }
 
@@ -287,12 +267,8 @@ header .nav .menu .ul li a {
 }
 
 header .nav .lang .lang__current {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #fff;
   cursor: pointer;
 }
@@ -301,3 +277,4 @@ header .nav .lang .lang__current img {
   width: 10px;
   margin-left: 5px;
 }
+/*# sourceMappingURL=style.css.map */
