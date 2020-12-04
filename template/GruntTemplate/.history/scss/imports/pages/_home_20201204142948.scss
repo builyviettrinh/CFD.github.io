@@ -79,16 +79,18 @@ header {
         /* padding: 20px 0; */
         color: #fff;
         position: relative;
-        ul.menu {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            li {
-                padding: 0 20px;
-                a {
-                    text-decoration: none;
-                    color: #fff;
+        .menu {
+            .ul {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                li {
+                    padding: 0 20px;
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                    }
                 }
             }
         }

@@ -79,16 +79,18 @@ header {
         /* padding: 20px 0; */
         color: #fff;
         position: relative;
-        ul.menu {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            li {
-                padding: 0 20px;
-                a {
-                    text-decoration: none;
-                    color: #fff;
+        .menu {
+            .ul {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                li {
+                    padding: 0 20px;
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                    }
                 }
             }
         }
@@ -401,11 +403,11 @@ header {
 footer {
     background-color: #121314;
     padding: 10px 0;
-    .footer_content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: #fff;
-    }
 }
 
+footer .footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}

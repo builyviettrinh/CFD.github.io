@@ -80,17 +80,18 @@ header {
         color: #fff;
         position: relative;
         ul.menu {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            li {
-                padding: 0 20px;
-                a {
-                    text-decoration: none;
-                    color: #fff;
+
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                li {
+                    padding: 0 20px;
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                    }
                 }
-            }
         }
         .lang {
             .lang__current {
