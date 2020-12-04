@@ -57,8 +57,6 @@ a.bnt_learnMore {
 
 .h2_title {
     margin: 24px 0;
-    @include styleText($fs-4,$color-black-0,$fw-bold);
-    text-transform: uppercase;
 }
 
 .space_p {
@@ -241,7 +239,7 @@ header {
  .furniture_content {
     display: flex;
     text-align: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .fur_image img {
