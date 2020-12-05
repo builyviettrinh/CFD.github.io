@@ -1,0 +1,95 @@
+a {
+    color: $text-cl;
+    text-decoration: none;
+    display: block;
+}
+
+img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+strong {
+    font-family: bb;
+}
+
+.-lv1 {
+    @include text(100px, b, 100px, $white-cl, none);
+    font-weight: normal;
+    margin: 0;
+    a {
+        @include text(100px, g, 100px, $white-cl, none);
+    }
+    @include tablet {}
+    @include mobile {}
+}
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 20px;
+    padding: 16px 52px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s;
+    /* position: relative; */
+}
+
+a.bnt_learnMore {
+    text-decoration: none;
+    color: black;
+    /* border: 2px solid #fff; */
+    font-size: 20px;
+    padding: 5px 0;
+    font-weight: 600;
+    i {
+        color: $yellow-cl;
+    }
+}
+
+
+/* .btn:after{
+    content: "";
+    width: 100%;
+} */
+
+.btn:hover:after {
+    transform: translateX(-0%);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    color: #121314;
+    background-color: #fff;
+    border: 2px solid #121212;
+    transition: all 0.4s;
+}
+
+.bnt_learnMore:hover {
+    color: #fff;
+    background-color: #121212;
+    border: 2px solid #fff;
+    transition: all 0.4s;
+}
+
+.space_section {
+    padding: 82px 0;
+}
+
+.h2_title {
+    margin: 24px 0;
+    // @include styleText($fs-4, $black-cl, $fw-bold);
+    font-weight: 600;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.space_p {
+    margin-bottom: 50px;
+    width: 50%;
+}
