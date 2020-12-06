@@ -75,15 +75,14 @@
 // }
 header {
     background-color: $black-cl;
-    width: 100%;
+    @include full-fixed;
+    // width: 100%;
+    // position: fixed;
+    // left: 0;
+    // top: 0;
     height: 100px;
-    text-align: center;
     line-height: 100px;
-    position: fixed;
-    left: 0;
-    top: 0;
     z-index: 2;
-    font-family: Pxp;
     .nav {
         display: flex;
         justify-content: space-between;
@@ -100,9 +99,10 @@ header {
             li {
                 padding: 0 20px;
                 a {
-                    text-decoration: none;
-                    color: $white-cl;
-                    font-family: pxb;
+                    @include text($fz-text,pxb,normal,$white-cl,uppercase);
+                    &:hover{
+                        opacity: 0.5;
+                    }
                 }
             }
         }
@@ -110,6 +110,7 @@ header {
             .lang__current {
                 display: flex;
                 align-items: center;
+                // @include text($fz-text,pxb,normal,$white-cl,uppercase);
                 color: $white-cl;
                 cursor: pointer;
                 img {
@@ -117,6 +118,18 @@ header {
                     margin-left: 5px;
                 }
             }
+        }
+    }
+    @include tablet{
+        .container-fluid{
+            .logo{
+                width: 160px;
+            }
+        }
+    }
+    @include mobile{
+        .nav{
+            
         }
     }
 }
