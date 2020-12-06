@@ -25,8 +25,7 @@ strong {
     @include mobile {}
 }
 
-// customize 
-// button 
+// common, viet nhung cai chung
 .btn {
     color: #fff;
     border: 2px solid #fff;
@@ -42,13 +41,42 @@ strong {
 }
 
 a.bnt_learnMore {
-    color: black;
-    /* border: 2px solid #fff; */
+    cursor: pointer;
+    transition: all 0.4s;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: pb;
     font-size: 20px;
     padding: 5px 0;
     font-weight: 600;
+    letter-spacing: 2px;
+    position: relative;
     i {
         color: $yellow-cl;
+        padding-left: 10px;
+    }
+    &::before {
+        content: "";
+        width: 35px;
+        height: 2px;
+        background: $yellow-cl;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+    }
+    img {
+        position: relative;
+        @include transform(translateX(0px));
+        @include transition($t);
+    }
+    &:hover {
+        img {
+            @include transform(translateX(10px));
+            @include transition($t);
+        }
     }
 }
 
@@ -66,20 +94,11 @@ a.bnt_learnMore {
 .btn:hover {
     color: #121314;
     background-color: #fff;
-    border: 2px solid #121212;
     transition: all 0.4s;
 }
 
-.bnt_learnMore:hover {
-    color: #fff;
-    background-color: #121212;
-    border: 2px solid #fff;
-    transition: all 0.4s;
-}
-
-// common
-.space_section {
-    padding: 82px 0;
+.hidden {
+    display: none;
 }
 
 .h2_title {
@@ -93,10 +112,4 @@ a.bnt_learnMore {
 .space_p {
     margin-bottom: 50px;
     width: 50%;
-}
-
-img {
-    width: 100%;
-    height: 100%;
-    display: block;
 }

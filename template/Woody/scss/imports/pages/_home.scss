@@ -1,14 +1,15 @@
 /* slide  */
+
 .slider {
     position: relative;
     max-height: 800px;
     overflow: hidden;
     &__images {
         position: relative;
-        &-item{
+        &-item {
             width: 100%;
             height: 100%;
-            .slider__text{
+            .slider__text {
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -23,23 +24,21 @@
                     font-weight: bold;
                     margin-bottom: 20px;
                 }
-                a{
+                a {
                     .icon {
                         width: 24px;
                         margin-left: 15px;
                     }
                 }
-            } 
+            }
         }
-
     }
     .slider__bottom {
         position: absolute;
         bottom: 20px;
         /* left: 0; */
         width: 100%;
-
-        .container-fluid{
+        .container-fluid {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -51,7 +50,7 @@
                 font-size: 43.81px;
                 color: #bea67c;
             }
-            &::before{
+            &::before {
                 content: "";
                 width: 42px;
                 height: 4px;
@@ -70,13 +69,13 @@
                     margin: 0 8px;
                     cursor: pointer;
                     transition: all 0.5s;
-                    &:hover, &.active{
+                    &:hover,
+                    &.active {
                         opacity: 1;
                         @include transition(0.5s);
                     }
                 }
             }
-
         }
         .mouse {
             width: 30px;
@@ -101,7 +100,7 @@
                 border: 1px solid $white-cl;
                 width: 80px;
                 padding: 10px 30px;
-                i{
+                i {
                     display: block;
                 }
             }
@@ -109,37 +108,34 @@
                 background-color: #bea67c;
                 // transform: rotate(-180deg) cách để quay ngược mũi tên
             }
-            &:hover{
+            &:hover {
                 @include transition(0.3s);
             }
         }
-
-
     }
-
-    @include desktop{
-        &__images{
-            .slider__text{
+    @include desktop {
+        &__images {
+            .slider__text {
                 text-align: center;
-                h2{
+                h2 {
                     font-size: 80px;
                 }
             }
         }
         .slider__bottom {
-            .mouse{
+            .mouse {
                 bottom: 10px;
             }
         }
     }
-    @include tablet{
+    @include tablet {
         height: 500px;
         &__images {
             height: 500px;
-            &-item{
+            &-item {
                 max-width: initial;
                 min-height: 100%;
-                .slider__text{
+                .slider__text {
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -154,15 +150,14 @@
                         font-weight: bold;
                         margin-bottom: 20px;
                     }
-                    a{
+                    a {
                         .icon {
                             width: 24px;
                             margin-left: 15px;
                         }
                     }
-                } 
+                }
             }
-
         }
     }
 }
@@ -170,44 +165,51 @@
 
 /* furniture */
 
-.furniture {
-    padding-top: 40px;
-    .furniture_content {
-        display: flex;
-        text-align: center;
-        justify-content: space-between;
-        .furniture_item, {
-            .bnt_learnMore{               
-                .icon{
-                    width:20px;
-                    margin-left: 15px;
-                    img{
-                        width: 20px;
-                        color: $yellow-cl;
-                    }
-                }
-            
-            }
-        }
+.products {
+    .products__item {
+        display: grid;
+        grid-template-columns: 1fr 520px;
     }
-    .decor_content {
-        display: flex;
-        text-align: center;
-        justify-content: space-around;
-        .decor_item {
-             .bnt_learnMore{               
-                .icon{
-                    width:20px;
-                    margin-left: 15px;
-                    img{
-                        width: 20px;
-                        color: $yellow-cl;
-                    }
-                }
-            
-            }
-        }
+    .furniture {
+        margin-bottom: 80px;
     }
+    .decor {
+        direction: rtl; //dung de dao vi tri 2 item
+    }
+    // .products__furniture {
+    //     display: flex;
+    //     text-align: center;
+    //     justify-content: space-between;
+    //     .furniture_item {
+    //         .bnt_learnMore {
+    //             .icon {
+    //                 width: 20px;
+    //                 margin-left: 15px;
+    //                 img {
+    //                     width: 20px;
+    //                     color: $yellow-cl;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+    // .products__decor {
+    //     display: flex;
+    //     text-align: center;
+    //     justify-content: space-around;
+    //     .decor_item {
+    //         .bnt_learnMore {
+    //             .icon {
+    //                 width: 20px;
+    //                 margin-left: 15px;
+    //                 img {
+    //                     width: 20px;
+    //                     color: $yellow-cl;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 
