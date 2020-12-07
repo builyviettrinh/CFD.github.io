@@ -287,7 +287,7 @@
     background-size: cover;
     height: 500px;
     .design_content {
-        // width: 50%;
+
          h2 {
             color: #bea67c;
         }
@@ -296,8 +296,17 @@
             color: $white-cl;
         }
         a{
+                        position: relative;
             i{
-                
+                    display: block;
+    border-radius: 50%;
+    background-color: #bea67c;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: $white-cl;
+    padding: 10px;
+    transform: translate(-50%, -50%);
             }
         }
     }

@@ -297,7 +297,16 @@
         }
         a{
             i{
-                
+                    display: block;
+    border-radius: 50%;
+    background-color: #bea67c;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: $white-cl;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+}
             }
         }
     }

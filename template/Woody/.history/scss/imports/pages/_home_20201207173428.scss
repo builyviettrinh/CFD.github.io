@@ -229,7 +229,7 @@
 
 .quality_content {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -285,23 +285,22 @@
 .design {
     background: url(../img/banner-video.jpg) no-repeat center;
     background-size: cover;
-    height: 500px;
-    .design_content {
-        // width: 50%;
-         h2 {
-            color: #bea67c;
-        }
-        p {
-            font-family: Pr;
-            color: $white-cl;
-        }
-        a{
-            i{
-                
-            }
-        }
-    }
+    height: 400px;
 }
+
+.design_content {
+    padding: 50px 0;
+    width: 50%;
+}
+
+.design_content h2 {
+    color: #bea67c;
+}
+
+.design_content p {
+    color: $white-cl;
+}
+
 
 /* about  */
 

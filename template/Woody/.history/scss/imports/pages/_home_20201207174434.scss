@@ -287,18 +287,12 @@
     background-size: cover;
     height: 500px;
     .design_content {
-        // width: 50%;
+        width: 50%;
          h2 {
             color: #bea67c;
         }
         p {
-            font-family: Pr;
             color: $white-cl;
-        }
-        a{
-            i{
-                
-            }
         }
     }
 }
