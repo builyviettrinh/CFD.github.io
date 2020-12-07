@@ -103,6 +103,7 @@ a.bnt_learnMore {
 
 .h2_title {
     margin: 24px 0;
+    font-family: pb;
     // @include styleText($fs-4, $black-cl, $fw-bold);
     font-weight: 600;
     font-size: 40px;
@@ -110,6 +111,21 @@ a.bnt_learnMore {
 }
 
 .space_p {
-    margin-bottom: 50px;
-    width: 50%;
+    margin-bottom: 40px;
+    max-width: 60%;
 }
+ @include tablet {
+        .h2_title{
+            font-size: 32px;
+        }
+
+    }
+    @include mobile {
+        .h2_title{
+            margin: 10px 0;
+            font-weight: 600;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+    }
+

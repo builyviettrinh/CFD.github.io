@@ -1,20 +1,28 @@
 .text {
-    padding-top: 80px;
+    padding-left: 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     h2 {
         @include text(40px, pb, $lh-text, $text-cl, uppercase);
         position: relative;
-        display: inline-flex;
-        align-items: center;
+        // display: inline-flex;
+        // align-items: center;
         &::before {
             content: "";
             width: 80px;
             height: 2px;
             background: $color-gray-2;
             display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: -96px;
+            transform: translateY(-50%);
         }
     }
     p {
-        padding: 10px 10px 18px 30px;
+        // padding-right: 30px;
         color: $color-gray-1;
     }
 }
