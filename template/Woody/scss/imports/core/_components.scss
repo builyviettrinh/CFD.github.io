@@ -22,7 +22,16 @@
         }
     }
     p {
-        // padding-right: 30px;
         color: $color-gray-1;
+    }
+    @include tablet {}
+    @include mobile {
+        padding-left: 20px;
+        h2 {
+            font-size: 28px;
+            &::before {
+                width: 40px;
+            }
+        }
     }
 }

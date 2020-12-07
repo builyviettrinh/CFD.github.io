@@ -114,18 +114,24 @@ a.bnt_learnMore {
     margin-bottom: 40px;
     max-width: 60%;
 }
- @include tablet {
-        .h2_title{
-            font-size: 32px;
-        }
 
+@include tablet {
+    .h2_title {
+        font-size: 32px;
     }
-    @include mobile {
-        .h2_title{
-            margin: 10px 0;
-            font-weight: 600;
-            font-size: 20px;
-            text-transform: uppercase;
-        }
-    }
+}
 
+@include mobile {
+    .h2_title {
+        margin: 10px 0;
+        font-weight: 600;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    .btn {
+        color: #fff;
+        border: 2px solid #fff;
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+}
