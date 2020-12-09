@@ -444,6 +444,7 @@
                     left: 50%;
                     display: block;
                     transform: translate(-50%, -50%);
+                    transform: scale(3);
                     position: absolute;
                 }
             }
@@ -511,7 +512,7 @@
             gap: 30px 18px;
             .news_item {
                 .news_image {
-                    min-height: 200px;
+                    min-height: 250px;
                     margin-bottom: 20px;
                 }
                 .news_text {

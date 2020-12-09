@@ -432,7 +432,6 @@
             // grid-template-rows: auto;
             // gap: 20px;
             .gallery_item {
-                margin-bottom: 20px;
                 min-height: 200px;
                 position: relative;
                 overflow: hidden;
@@ -511,7 +510,7 @@
             gap: 30px 18px;
             .news_item {
                 .news_image {
-                    min-height: 200px;
+                    min-height: 250px;
                     margin-bottom: 20px;
                 }
                 .news_text {

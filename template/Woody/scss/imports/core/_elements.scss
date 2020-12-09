@@ -119,6 +119,9 @@ a.bnt_learnMore {
     .h2_title {
         font-size: 32px;
     }
+        .space_p {
+        margin-bottom: 30px;
+    }
 }
 
 @include mobile {
@@ -133,5 +136,9 @@ a.bnt_learnMore {
         border: 2px solid #fff;
         font-size: 14px;
         padding: 8px 10px;
+    }
+    .space_p {
+        margin-bottom: 24px;
+        max-width: 100%;
     }
 }
