@@ -8,6 +8,9 @@ img {
     display: block;
     margin: auto;
     max-width: 100%;
+    // @include minW(1024px) {
+    //     max-width: initial;
+    // }
 }
 
 strong {
@@ -117,28 +120,50 @@ a.bnt_learnMore {
 
 @include tablet {
     .h2_title {
-        font-size: 32px;
+        font-size: 28px;
     }
-        .space_p {
+    .space_p {
         margin-bottom: 30px;
+    }
+    a.btn {
+        color: #fff;
+        border: 1px solid #fff;
+        font-size: 14px;
+        padding: 8px 10px;
+        letter-spacing: 2px;
     }
 }
 
 @include mobile {
     .h2_title {
-        margin: 10px 0;
-        font-weight: 600;
         font-size: 20px;
-        text-transform: uppercase;
     }
     .btn {
-        color: #fff;
-        border: 2px solid #fff;
+        border: 1px solid #fff;
         font-size: 14px;
         padding: 8px 10px;
     }
     .space_p {
         margin-bottom: 24px;
         max-width: 100%;
+    }
+    a.btn {
+        color: #fff;
+        border: 1px solid #fff;
+        font-size: 12px;
+        padding: 6px 10px;
+        letter-spacing: 2px;
+    }
+    a.bnt_learnMore {
+        font-size: 16px;
+        padding: 4px 0;
+        letter-spacing: 1px;
+        i {
+            padding-left: 8px;
+        }
+        &::before {
+            width: 30px;
+            height: 2px;
+        }
     }
 }

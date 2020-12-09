@@ -1,85 +1,6 @@
-// header .logo{
-// 	width: 90px;
-// 	height: 50px;
-//     // @include desktop {
-//     // }
-//     // @include tablet {
-//     // }
-//     // @include mobile {
-//     // }
-//     // @include mobile-xxs {
-//     // }
-// }
-// header .logo{
-// 	width: 90px;
-// 	height: 50px;
-// }
-// header .menu{
-// 	width: 400px;
-// 	height: 50px;
-// }
-// header .lang{
-// 	width: 400px;
-// 	height: 50px;
-// }
-// header .lang .text{
-// }
-// $background: #000; //scss
-// header{
-// 	width: 100%;
-// 	height: 50px;
-// 	--background: #000; // css
-// 	.logo{
-// 		width: 50px;
-// 		height: 50px;
-// 		background: $background; // scss
-// 		background: var(--background);
-// 		@include midflex();
-// 	}
-// 	.menu{
-// 		width: 500px;
-// 		height: 50px;
-// 		background: $background;
-// 		background: var(--background);
-// 		ul{
-// 			li{
-// 				a{
-// 					font-size: 18px;
-// 					line-height: 24px;
-// 				}
-// 			}
-// 		}
-// 	}
-// 	.lang{
-// 		width: 100px;
-// 		height: 50px;
-// 		.text{
-// 			font-size: 20px;
-// 			line-height: 30px;
-// 			@include overtext(3);
-// 			&:hover{
-// 				color:red;
-// 			}
-// 			&:before{
-// 				content: '';
-// 				width: 10px;
-// 				height: 10px;
-// 			}
-// 		}
-// 	}
-// }
-// .text{
-// 	font-size:20px;
-// 	line-height: 32px;
-// 	color: red;
-// }
 header {
     background-color: $black-cl;
     @include full-fixed;
-    // width: 100%;
-    // position: fixed;
-    // left: 0;
-    // top: 0;
     height: 100px;
     z-index: 2;
     .container-fluid {
@@ -148,6 +69,7 @@ header {
         }
     }
     @include tablet {
+        height: 60px;
         .container-fluid {
             .logo {
                 width: 160px;
@@ -157,6 +79,9 @@ header {
     @include mobile {
         height: 60px;
         .container-fluid {
+            .logo {
+                width: 120px;
+            }
             .nav {
                 ul.menu {
                     display: none;
@@ -164,6 +89,9 @@ header {
             }
             .btnMenu {
                 display: block;
+            }
+            .lang {
+                font-size: 12px;
             }
         }
     }

@@ -9,6 +9,7 @@
         &-item {
             width: 100%;
             height: 100%;
+            overflow: hidden;
             .slider__text {
                 position: absolute;
                 left: 50%;
@@ -81,9 +82,15 @@
             position: absolute;
             bottom: 20px;
             left: 50%;
-            transform: translateX(50%);
+            transform: translateX(-50%);
             &_image {
-                margin-bottom: 30px;
+                margin-bottom: 20px;
+            }
+            &_arrow {
+                .move {
+                    transform: translateY(0);
+                    animation: arrowDown 2s infinite;
+                }
             }
         }
         .control {
@@ -132,27 +139,71 @@
         &__images {
             height: 100%;
             &-item {
+                height: 100%;
                 max-width: initial;
                 min-height: 100%;
-                .img {
-                    height: 100%;
-                }
-                .slider__text {
+                position: relative;
+                >img {
+                    min-width: 100%;
+                    min-height: 100%;
+                    display: block;
+                    object-fit: cover;
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
+                }
+                .slider__text {
                     h2 {
-                        color: $yellow-cl;
-                        font-size: 100px;
-                        margin-bottom: 20px;
+                        font-size: 60px;
+                        margin-bottom: 10px;
                     }
                     a {
                         .icon {
-                            width: 24px;
-                            margin-left: 15px;
+                            width: 18px;
+                            margin-left: 5px;
                         }
                     }
+                }
+            }
+        }
+        .slider__bottom {
+            .paging {
+                span {
+                    font-size: 30px;
+                }
+                &::before {
+                    height: 2px;
+                    margin-right: 10px;
+                }
+                .list {
+                    li {
+                        width: 6px;
+                        height: 6px;
+                        margin: 0 6px;
+                    }
+                }
+            }
+            .mouse {
+                bottom: 10px;
+                &_image {
+                    margin-bottom: 10px;
+                }
+            }
+            .control {
+                .control__btn {
+                    width: 65px;
+                    padding: 8px 22px;
+                    i {
+                        display: block;
+                    }
+                }
+                .prev {
+                    background-color: #bea67c;
+                    // transform: rotate(-180deg) cách để quay ngược mũi tên
+                }
+                &:hover {
+                    @include transition(0.3s);
                 }
             }
         }
@@ -160,11 +211,59 @@
     @include mobile {
         .slider__text {
             h2 {
-                color: $yellow-cl;
-                font-size: 60px;
+                font-size: 50px;
                 margin-bottom: 10px;
             }
         }
+        .slider__bottom {
+            .paging {
+                span {
+                    font-size: 24px;
+                }
+                &::before {
+                    width: 30px;
+                    height: 2px;
+                    margin-right: 8px;
+                }
+                .list {
+                    li {
+                        width: 5px;
+                        height: 5px;
+                        margin: 0 2px;
+                    }
+                }
+            }
+            .mouse {
+                bottom: 30px;
+                &_image {
+                    margin-bottom: 8px;
+                }
+            }
+            .control {
+                .control__btn {
+                    width: 60px;
+                    padding: 8px 22px;
+                }
+                .prev {
+                    background-color: #bea67c;
+                    // transform: rotate(-180deg) cách để quay ngược mũi tên
+                }
+                &:hover {
+                    @include transition(0.3s);
+                }
+            }
+        }
+    }
+}
+
+@keyframes arrowDown {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(20px);
     }
 }
 
@@ -173,10 +272,8 @@
 
 .products {
     .products__item {
-        // display: grid;
-        // grid-template-columns: 1fr 520px;
         display: flex;
-        // text-align: center;
+        align-items: center;
         justify-content: space-between;
         &:last-child {
             flex-direction: row-reverse;
@@ -184,6 +281,7 @@
                 align-items: flex-end;
                 padding-right: 96px;
                 padding-left: initial;
+                margin-left: 20px;
                 .h2_title {
                     &::before {
                         left: initial;
@@ -195,32 +293,62 @@
     }
     .furniture {
         margin-bottom: 80px;
+        .text {
+            p {
+                margin-right: 25px;
+            }
+        }
+    }
+    .decor {
+        .text {
+            p {
+                text-align: right;
+            }
+        }
     }
     .products_img {
-        width: 100%;
-        height: 100%;
+        // width: 100%;
+        width: 50%;
+        // height: 100%;
+        flex-shrink: 0;
     }
-    @include tablet {}
+    @include tablet {
+        img {
+            // max-width: initial;
+        }
+    }
     @include mobile {
         .products__item {
             display: block;
+            &:last-child {
+                .text {
+                    padding-right: 0;
+                }
+            }
+        }
+        .furniture {
+            margin-bottom: 40px;
+        }
+        .products_img {
+            width: 100%;
+            margin-top: 20px;
         }
     }
 }
 
 
 /* quality  */
+
 .quality {
-    position: relative;
-    .quality_title{
-        text-align: center;
-        max-width: 40%;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        p{
-            position: relative;        
+    // position: relative;
+    text-align: center;
+    .quality_title {
+        max-width: 500px;
+        margin: 0 auto;
+        p {
+            position: relative;
+            margin-top: 40px;
+            text-align: center;
             &::before {
                 content: "";
                 width: 38px;
@@ -235,11 +363,11 @@
         }
     }
     .quality_content {
-        margin-top: 100px;
+        margin-top: 40px;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        .quality_item{
+        .quality_item {
             .quality_image {
                 position: relative;
                 margin: 20px auto;
@@ -259,7 +387,7 @@
                     position: absolute;
                     top: 50%;
                     left: 50%;
-                    transform: translate(-50%,-50%);
+                    transform: translate(-50%, -50%);
                     border-radius: 50%;
                     padding: 12px;
                 }
@@ -267,7 +395,7 @@
                     i.icon {
                         display: block;
                         border-radius: 50%;
-                        background-color:$yellow-cl-2;
+                        background-color: $yellow-cl-2;
                         position: absolute;
                         top: 50%;
                         left: 50%;
@@ -285,15 +413,15 @@
                     }
                 }
             }
-            .quality_text{
+            .quality_text {
                 padding-top: 24px;
                 text-align: center;
-                position: relative;        
+                position: relative;
                 &::before {
                     content: "";
                     width: 24px;
                     height: 1.5px;
-                    background-color:  $yellow-cl-2;
+                    background-color: $yellow-cl-2;
                     position: absolute;
                     top: 0;
                     left: 50%;
@@ -302,42 +430,35 @@
                 }
             }
         }
-
-
     }
     @include tablet {
-        .quality_title{
-            max-width: 80%;
-         }
         .quality_content {
-            .quality_item{
-                 .quality_image {
+            .quality_item {
+                .quality_image {
                     width: 180px;
                     height: 180px;
                     border-radius: 50%;
                     border: 1px solid $color-gray-3;
                     padding: 13px;
-               }
-            .quality_text{
-                padding-top: 24px;
-                text-align: center;
-                position: relative;        
-                &::before {
-                    content: "";
-                    width: 24px;
-                    height: 1.5px;
-                    background-color:  $yellow-cl-2;
-                    position: absolute;
-                    top: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    display: block;
+                }
+                .quality_text {
+                    padding-top: 24px;
+                    text-align: center;
+                    position: relative;
+                    &::before {
+                        content: "";
+                        width: 24px;
+                        height: 1.5px;
+                        background-color: $yellow-cl-2;
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        display: block;
+                    }
                 }
             }
         }
-
-
-    }
     }
     @include mobile {
         p {
@@ -350,7 +471,6 @@
             }
             .quality_text {
                 text-align: center;
-
             }
         }
     }
@@ -358,12 +478,13 @@
 
 
 /* design  */
+
 .design {
     background: url(../img/banner-video.jpg) no-repeat;
     background-size: cover;
     height: 500px;
     .design_content {
-        max-width: 50%;
+        max-width: 500px;
         h2 {
             color: #bea67c;
         }
@@ -380,7 +501,7 @@
             border: 1px solid $white-cl;
             border-radius: 50%;
             padding: 4px;
-            img{
+            img {
                 width: 100%;
             }
         }
@@ -431,6 +552,7 @@
 
 
 /* gallery  */
+
 .gallery {
     background-color: $black-cl;
     color: $color-gray-2;
@@ -482,7 +604,6 @@
     @include mobile {
         .gallery_content {
             display: block;
-
             // display: grid;
             // grid-template-columns: repeat(1, 1fr);
             // grid-template-rows: auto;
@@ -533,12 +654,12 @@
                     position: absolute;
                     top: 50%;
                     left: 50%;
-                    transform: translate(-50%,-50%);
+                    transform: translate(-50%, -50%);
                 }
             }
             .news_text {
                 padding-top: 24px;
-                position: relative;        
+                position: relative;
                 &::before {
                     content: "";
                     width: 84px;
@@ -571,7 +692,7 @@
                     margin-bottom: 20px;
                 }
                 .news_text {
-                    padding-top: 18px;     
+                    padding-top: 18px;
                 }
             }
         }
@@ -584,7 +705,7 @@
                     margin-bottom: 20px;
                 }
                 .news_text {
-                    padding-top: 18px;     
+                    padding-top: 18px;
                 }
             }
         }
