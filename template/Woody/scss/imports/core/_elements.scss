@@ -28,6 +28,7 @@ strong {
 // common, viet nhung cai chung
 .btn {
     color: #fff;
+    font-family: Pxb;
     border: 2px solid #fff;
     font-size: 20px;
     padding: 16px 52px;
@@ -112,7 +113,6 @@ a.bnt_learnMore {
 
 .space_p {
     margin-bottom: 40px;
-    max-width: 60%;
 }
 
 @include tablet {

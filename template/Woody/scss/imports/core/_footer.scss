@@ -16,7 +16,21 @@ footer {
         }
     }
     @include desktop {}
-    @include tablet {}
-    @include mobile {}
+    @include tablet {
+
+    }
+    @include mobile {
+     .footer_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        .logoft {
+            position: absolute;
+            left: 50%;
+            @include transform(translateX(-50%))
+        }
+    }       
+    }
     @include mobile-xxs {}
 }
