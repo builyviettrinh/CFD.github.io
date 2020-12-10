@@ -36,13 +36,8 @@
     }
 }
 .title_text{
-    margin-bottom: 50px;
-    margin-top: 26px;
+    margin-bottom: 40px;
     p{
         max-width: 500px;
-    }
-        @include tablet {}
-    @include mobile {
-
     }
 }

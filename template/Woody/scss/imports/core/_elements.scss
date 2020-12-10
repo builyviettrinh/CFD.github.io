@@ -106,7 +106,7 @@ a.bnt_learnMore {
 }
 
 .h2_title {
-    margin: 24px 0;
+    margin: 15px 0;
     font-family: pb;
     // @include styleText($fs-4, $black-cl, $fw-bold);
     font-weight: 600;
@@ -114,17 +114,14 @@ a.bnt_learnMore {
     text-transform: uppercase;
 }
 
-.space_p {
-    margin-bottom: 40px;
-}
 
 @include tablet {
     .h2_title {
         font-size: 28px;
     }
-    .space_p {
-        margin-bottom: 30px;
-    }
+    // .space_p {
+    //     margin-bottom: 30px;
+    // }
     a.btn {
         color: #fff;
         border: 1px solid #fff;
@@ -142,10 +139,6 @@ a.bnt_learnMore {
         border: 1px solid #fff;
         font-size: 14px;
         padding: 8px 10px;
-    }
-    .space_p {
-        margin-bottom: 24px;
-        max-width: 100%;
     }
     a.btn {
         color: #fff;
