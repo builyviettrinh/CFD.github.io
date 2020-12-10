@@ -59,16 +59,6 @@
     @include text(20px,Pxb,normal,$white-cl,uppercase);
     /* position: relative; */
 }
-.btn:hover:after {
-    transform: translateX(-0%);
-    transition: 0.3s;
-}
-
-.btn:hover {
-    color: #121314;
-    background-color: #fff;
-    transition: all 0.4s;
-}
 
 a.bnt_learnMore {
     cursor: pointer;
@@ -114,49 +104,3 @@ a.bnt_learnMore {
     content: "";
     width: 100%;
 } */
-
-@include tablet {
-    .h2_title {
-        font-size: 28px;
-    }
-    // .space_p {
-    //     margin-bottom: 30px;
-    // }
-    a.btn {
-        color: #fff;
-        border: 1px solid #fff;
-        font-size: 14px;
-        padding: 8px 10px;
-        letter-spacing: 2px;
-    }
-}
-
-@include mobile {
-    .h2_title {
-        font-size: 20px;
-    }
-    .btn {
-        border: 1px solid #fff;
-        font-size: 14px;
-        padding: 8px 10px;
-    }
-    a.btn {
-        color: #fff;
-        border: 1px solid #fff;
-        font-size: 12px;
-        padding: 6px 10px;
-        letter-spacing: 2px;
-    }
-    a.bnt_learnMore {
-        font-size: 16px;
-        padding: 4px 0;
-        letter-spacing: 1px;
-        i {
-            padding-left: 8px;
-        }
-        &::before {
-            width: 30px;
-            height: 2px;
-        }
-    }
-}

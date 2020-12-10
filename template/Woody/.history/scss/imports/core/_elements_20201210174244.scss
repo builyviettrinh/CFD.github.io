@@ -1,73 +1,47 @@
-.text {
-    padding-left: 96px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    h2 {
-        @include text(40px, pb, $lh-text, $text-cl, uppercase);
-        position: relative;
-        // display: inline-flex;
-        // align-items: center;
-        &::before {
-            content: "";
-            width: 80px;
-            height: 2px;
-            background: $color-gray-2;
-            display: inline-block;
-            position: absolute;
-            top: 50%;
-            left: -96px;
-            transform: translateY(-50%);
-        }
-    }
-    p {
-        color: $color-gray-1;
+a {
+    color: $text-cl;
+    text-decoration: none;
+    display: block;
+}
+
+img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    // @include minW(1024px) {
+    //     max-width: initial;
+    // }
+}
+
+strong {
+    font-family: bb;
+}
+
+.-lv1 {
+    @include text(100px, b, 100px, $white-cl, none);
+    font-weight: normal;
+    margin: 0;
+    a {
+        @include text(100px, g, 100px, $white-cl, none);
     }
     @include tablet {}
-    @include mobile {
-        padding-left: 20px;
-        h2 {
-            font-size: 28px;
-            &::before {
-                width: 40px;
-            }
-        }
-    }
+    @include mobile {}
 }
 
-.title_text{
-    margin-bottom: 50px;
-    margin-top: 26px;
-    p{
-        max-width: 500px;
-    }
-        @include tablet {}
-    @include mobile {
-
-    }
-}
-
+// common, viet nhung cai chung
 .btn {
+    color: #fff;
+    font-family: Pxb;
     border: 2px solid #fff;
+    font-size: 20px;
     padding: 16px 52px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    text-transform: uppercase;
     cursor: pointer;
     transition: all 0.4s;
-    @include text(20px,Pxb,normal,$white-cl,uppercase);
     /* position: relative; */
-}
-.btn:hover:after {
-    transform: translateX(-0%);
-    transition: 0.3s;
-}
-
-.btn:hover {
-    color: #121314;
-    background-color: #fff;
-    transition: all 0.4s;
 }
 
 a.bnt_learnMore {
@@ -76,7 +50,9 @@ a.bnt_learnMore {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    @include text(20px,pb,normal,$black-bg-cl,uppercase);
+    text-transform: uppercase;
+    font-family: pb;
+    font-size: 20px;
     padding: 5px 0;
     margin-top: 10px;
     font-weight: 600;
@@ -114,6 +90,31 @@ a.bnt_learnMore {
     content: "";
     width: 100%;
 } */
+
+.btn:hover:after {
+    transform: translateX(-0%);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    color: #121314;
+    background-color: #fff;
+    transition: all 0.4s;
+}
+
+.hidden {
+    display: none;
+}
+
+.h2_title {
+    margin: 15px 0;
+    font-family: pb;
+    // @include styleText($fs-4, $black-cl, $fw-bold);
+    font-weight: 600;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
 
 @include tablet {
     .h2_title {

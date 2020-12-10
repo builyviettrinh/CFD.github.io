@@ -25,7 +25,7 @@ body {
         margin: auto;
         overflow: hidden;
         .space_section {
-            margin: var(--pdSec) 0;
+            padding: var(--pdSec) 0;
         }
     }
     @include desktop {}

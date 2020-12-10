@@ -19,7 +19,7 @@ body {
     background: $white-cl;
     position: relative;
     // @include custom-scrollbar();
-    --pdSec: 82px;
+    --mSec: 82px;
     .mainwrapper {
         width: 100%;
         margin: auto;
@@ -30,9 +30,9 @@ body {
     }
     @include desktop {}
     @include tablet {
-         --pdSec: 70px;
+         --mSec: 70px;
     }
     @include mobile {
-        --pdSec: 60px;
+        --mSec: 60px;
     }
 }
