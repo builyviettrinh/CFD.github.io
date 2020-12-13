@@ -12,25 +12,37 @@ footer {
         .logoft {
             position: absolute;
             left: 50%;
-            @include transform(translateX(-50%))
+            @include transform(translateX(-50%));
         }
     }
     @include desktop {}
     @include tablet {
-
+        padding: 18px 0;
+        .footer_content {
+            font-size: 12px;
+            .logoft {
+                width: 120px;
+            }
+        }
     }
     @include mobile {
-     .footer_content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        .logoft {
-            position: absolute;
-            left: 50%;
-            @include transform(translateX(-50%))
+        padding: 16px 0;
+        .footer_content {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+            font-size: 8px;
+            .copy {
+                margin-right: 10px;
+            }
+            .logoft {
+                width: 80px;
+                position: absolute;
+                left: 0;
+                transform: translateX(0);
+            }
         }
-    }       
     }
     @include mobile-xxs {}
 }

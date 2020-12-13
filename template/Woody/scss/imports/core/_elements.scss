@@ -33,9 +33,9 @@ strong {
 }
 
 .h2_title {
-    margin: 15px 0;
+    margin-bottom: 15px;
     font-weight: 600;
-    @include text(40px,pb,normal,$black-bg-cl,uppercase);
+    @include text(40px, pb, normal, $black-bg-cl, uppercase);
 }
 
 @include tablet {
@@ -49,4 +49,3 @@ strong {
         font-size: 20px;
     }
 }
-

@@ -36,16 +36,17 @@
     }
 }
 
-.title_text{
+.title_text {
     margin-bottom: 50px;
     margin-top: 26px;
-    p{
+    p {
         max-width: 500px;
     }
-        @include tablet {}
-    @include mobile {
-
+    @include tablet {
+        margin-bottom: 35px;
+        margin-top: 0;
     }
+    @include mobile {}
 }
 
 .btn {
@@ -56,9 +57,10 @@
     align-items: center;
     cursor: pointer;
     transition: all 0.4s;
-    @include text(20px,Pxb,normal,$white-cl,uppercase);
+    @include text(20px, Pxb, normal, $white-cl, uppercase);
     /* position: relative; */
 }
+
 .btn:hover:after {
     transform: translateX(-0%);
     transition: 0.3s;
@@ -76,7 +78,7 @@ a.bnt_learnMore {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    @include text(20px,pb,normal,$black-bg-cl,uppercase);
+    @include text(20px, pb, normal, $black-bg-cl, uppercase);
     padding: 5px 0;
     margin-top: 10px;
     font-weight: 600;
@@ -141,11 +143,10 @@ a.bnt_learnMore {
         padding: 8px 10px;
     }
     a.btn {
-        color: #fff;
         border: 1px solid #fff;
         font-size: 12px;
         padding: 6px 10px;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
     }
     a.bnt_learnMore {
         font-size: 16px;
