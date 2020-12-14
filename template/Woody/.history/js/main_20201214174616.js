@@ -13,9 +13,9 @@ window.addEventListener("scroll", function () {
   if (document.body.getBoundingClientRect().top > scrollPos) {
     console.log("scrolling down");
 
-    getId("backToTop").classList.remove("active");
+    document.getElementById("backToTop").classList.remove("active");
   } else {
-    getId("backToTop").classList.add("active");
+    document.getElementById("backToTop").classList.add("active");
     console.log("scrolling up");
   }
   // luu vi tri moi

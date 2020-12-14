@@ -39,9 +39,11 @@ header {
                     margin-left: 5px;
                 }
             }
-            #lang__dropdown{
+            .dropdown-content{
                 display: none;
-
+                a{
+                    color: $white-cl;
+                }
             }
             .show {
                 display: block;
@@ -79,8 +81,18 @@ header {
         height: 60px;
         .container-fluid {
             .logo {
-                width: 160px;
+                width: 140px;
             }
+            .nav {
+            ul.menu {
+                li {
+                    padding: 0 8px;
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+           }
         }
     }
     @include mobile {

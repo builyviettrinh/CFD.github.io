@@ -1,6 +1,6 @@
 // backtotop
 
-getId("backToTop").addEventListener("click", function (e) {
+document.getElementById("backToTop").addEventListener("click", function (e) {
   e.preventDefault();
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
@@ -13,9 +13,9 @@ window.addEventListener("scroll", function () {
   if (document.body.getBoundingClientRect().top > scrollPos) {
     console.log("scrolling down");
 
-    getId("backToTop").classList.remove("active");
+    document.getElementById("backToTop").classList.remove("active");
   } else {
-    getId("backToTop").classList.add("active");
+    document.getElementById("backToTop").classList.add("active");
     console.log("scrolling up");
   }
   // luu vi tri moi
@@ -28,8 +28,8 @@ showSlidesAuto();
 
 function showSlidesAuto(n) {
   var i;
-  var slides = getClass("mySlides");
-  var dots = getClass("dot");
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
