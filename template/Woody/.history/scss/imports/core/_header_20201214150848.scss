@@ -1,0 +1,107 @@
+header {
+    background-color: $black-cl;
+    @include full-fixed;
+    height: 100px;
+    z-index: 2;
+    .container-fluid {
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        /* padding: 20px 0; */
+        .nav {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            ul.menu {
+                display: flex;
+                li {
+                    padding: 0 20px;
+                    a {
+                        @include text($fz-text, pxb, normal, $white-cl, uppercase);
+                        &:hover {
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+        }
+        .lang {
+            .lang__current {
+                display: flex;
+                align-items: center;
+                // @include text($fz-text,pxb,normal,$white-cl,uppercase);
+                color: $white-cl;
+                cursor: pointer;
+                img {
+                    width: 10px;
+                    margin-left: 5px;
+                }
+            }
+            .lang__dropdown{
+                display: none;
+
+            }
+            .show {display: block;}
+        }
+        .btnMenu {
+            display: none;
+            width: 40px;
+            height: 20px;
+            position: relative;
+            span {
+                width: 100%;
+                height: 2px;
+                display: block;
+                background: $yellow-cl;
+                position: absolute;
+                top: 50%;
+                @include transform(translateY(-50%));
+            }
+            &::before,
+            &::after {
+                content: "";
+                width: 100%;
+                height: 2px;
+                display: block;
+                background: $yellow-cl;
+            }
+            &::after {
+                position: absolute;
+                bottom: 0;
+            }
+        }
+    }
+    @include tablet {
+        height: 60px;
+        .container-fluid {
+            .logo {
+                width: 160px;
+            }
+        }
+    }
+    @include mobile {
+        height: 40px;
+        .container-fluid {
+            .logo {
+                width: 120px;
+            }
+            .nav {
+                ul.menu {
+                    display: none;
+                }
+            }
+            .nav__right {
+                display: flex;
+                .lang {
+                    font-size: 12px;
+                    margin-right: 15px;
+                }
+            }
+            .btnMenu {
+                display: block;
+            }
+        }
+    }
+}

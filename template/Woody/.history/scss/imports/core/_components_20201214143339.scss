@@ -1,0 +1,181 @@
+.text {
+    padding-left: 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    h2 {
+        @include text(40px, pb, $lh-text, $text-cl, uppercase);
+        position: relative;
+        // display: inline-flex;
+        // align-items: center;
+        &::before {
+            content: "";
+            width: 80px;
+            height: 2px;
+            background: $color-gray-2;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: -96px;
+            transform: translateY(-50%);
+        }
+    }
+    p {
+        color: $color-gray-1;
+    }
+    @include tablet {}
+    @include mobile {
+        padding-left: 20px;
+        h2 {
+            font-size: 28px;
+            &::before {
+                width: 40px;
+            }
+        }
+    }
+}
+
+.title_text {
+    margin-bottom: 50px;
+    margin-top: 26px;
+    p {
+        max-width: 500px;
+    }
+    @include tablet {
+        margin-bottom: 35px;
+        margin-top: 0;
+    }
+    @include mobile {}
+}
+
+.btn {
+    border: 2px solid $white-cl;
+    padding: 16px 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    @include text(20px, Pxb, normal, $white-cl, uppercase);
+     position: relative; 
+     overflow: hidden;
+}
+.btn:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background:linear-gradient(to right,#8c8c8c,#333333);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: 0.4s;
+
+}
+.btn span {
+    color: $white-cl;
+    transition: all 0.4s;
+    z-index: 10;
+}
+.btn:hover:after{
+    transform: translateX(-0%);
+    transition: 0.4s;
+}
+
+.btn:hover {
+    color: $black-bg-cl;
+    // background-color: $white-cl;
+    transition: all 0.4s;
+}
+
+a.bnt_learnMore {
+    cursor: pointer;
+    transition: all 0.4s;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    @include text(20px, pb, normal, $black-bg-cl, uppercase);
+    padding: 5px 0;
+    margin-top: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: relative;
+    i {
+        color: $yellow-cl;
+        padding-left: 10px;
+    }
+    &::before {
+        content: "";
+        width: 35px;
+        height: 2px;
+        background: $yellow-cl;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+    }
+    img {
+        position: relative;
+        @include transform(translateX(0px));
+        @include transition($t);
+    }
+    &:hover {
+        img {
+            @include transform(translateX(10px));
+            @include transition($t);
+        }
+    }
+}
+
+
+/* .btn:after{
+    content: "";
+    width: 100%;
+} */
+
+@include tablet {
+    .h2_title {
+        font-size: 28px;
+    }
+    // .space_p {
+    //     margin-bottom: 30px;
+    // }
+    a.btn {
+        color: #fff;
+        border: 1px solid #fff;
+        font-size: 14px;
+        padding: 8px 10px;
+        letter-spacing: 2px;
+    }
+}
+
+@include mobile {
+    .h2_title {
+        font-size: 20px;
+    }
+    .btn {
+        border: 1px solid #fff;
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+    a.btn {
+        border: 1px solid #fff;
+        font-size: 12px;
+        padding: 6px 10px;
+        letter-spacing: 1px;
+    }
+    a.bnt_learnMore {
+        font-size: 16px;
+        padding: 4px 0;
+        letter-spacing: 1px;
+        i {
+            padding-left: 8px;
+        }
+        &::before {
+            width: 30px;
+            height: 2px;
+        }
+    }
+}
