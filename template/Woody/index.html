@@ -12,7 +12,6 @@
     <!-- FONT  -->
     <link rel="stylesheet" href="dest/style.min.css" />
     <link rel="stylesheet" href="dest/fonts.css" />
-    <!-- <link rel="stylesheet" href="dest/stylelibs.min.css" /> -->
     <title>Wooder</title>
 </head>
 
@@ -28,11 +27,11 @@
             </div>
             <div class="nav">
                 <ul class="menu">
-                    <li><a href="#">HOME </a></li>
-                    <li><a href="#">PRODUCTS</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">GALLERY</a></li>
-                    <li><a href="#">NEWS</a></li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#products" data-id="products">PRODUCTS</a></li>
+                    <li><a href="#" data-id="about">ABOUT</a></li>
+                    <li><a href="#" data-id="gallery">GALLERY</a></li>
+                    <li><a href="#" data-id="news">NEWS</a></li>
                 </ul>
             </div>
             <div class="nav__right">
@@ -140,7 +139,7 @@
         </section>
 
         <!-- furniture  -->
-        <section class="products space_section">
+        <section class="products space_section" id="products">
             <div class="container">
                 <div class="products__item furniture">
                     <div class="furniture_item text">
@@ -175,7 +174,7 @@
         </section>
 
         <!-- quality  -->
-        <section class="quality space_section">
+        <section class="quality space_section" id="quality">
             <div class="container">
                 <div class="quality_title">
                     <h2 class="h2_title">WOODER - IS QUALITY</h2>
@@ -188,7 +187,7 @@
                     <div class="quality_item">
                         <div class="quality_image">
                             <img class="quality_img" src="img/wooder-design.jpg" alt="" />
-                            <div data-video-src ="KhCyot9FH70" class="play_video">
+                            <div data-video-src="HMLUYBOFdjY" class="play_video">
                                 <i class="icon"><img src="img/play-button-arrowhead.svg" alt="" /></i>
                             </div>
                         </div>
@@ -197,7 +196,7 @@
                     <div class="quality_item">
                         <div class="quality_image">
                             <img class="quality_img" src="img/wooder-skill.jpg" alt="" />
-                            <div data-video-src ="0gvcdiconKI" class="play_video">
+                            <div data-video-src="0gvcdiconKI" class="play_video">
                                 <i class="icon"><img src="img/play-button-arrowhead.svg" alt="" /></i>
                             </div>
                         </div>
@@ -206,7 +205,7 @@
                     <div class="quality_item">
                         <div class="quality_image">
                             <img class="quality_img" src="img/wooder-product.jpg" alt="" />
-                            <div data-video-src ="vRdMnXc6Yag" class="play_video"">
+                            <div data-video-src="vRdMnXc6Yag" class="play_video">
                                 <i class="icon"><img src="img/play-button-arrowhead.svg" alt="" /></i>
                             </div>
                         </div>
@@ -217,7 +216,7 @@
         </section>
 
         <!-- design  -->
-        <section class="design space_section">
+        <section class="design space_section" id="design">
             <div class="container">
                 <div class=" design_content">
                     <h2 class="h2_title">we Do the design of any complexity</h2>
@@ -231,7 +230,7 @@
         </section>
 
         <!-- about  -->
-        <section class="about space_section">
+        <section class="about space_section" id="about">
             <div class="container">
                 <div class="about_content">
                     <div class="about_item">
@@ -251,7 +250,7 @@
         </section>
 
         <!-- gallery   -->
-        <section class="gallery space_section">
+        <section class="gallery space_section" id="gallery">
             <div class="container">
                 <div class="title_text">
                     <h2 class="h2_title">GALLERY</h2>
@@ -281,7 +280,7 @@
         </section>
 
         <!-- news  -->
-        <section class="news space_section">
+        <section class="news space_section" id="news">
             <div class="container">
                 <div class="title_text">
                     <h2 class="h2_title">NEWS</h2>
@@ -329,7 +328,7 @@
         </section>
 
         <!-- photo  -->
-        <section class="photo space_section">
+        <section class="photo space_section" id="photo">
             <div class="photo_content">
                 <div class="photo_item photo1">
                     <img src="img/news-3.jpg" alt="" />
@@ -364,7 +363,8 @@
     <a  id="backToTop" href="#">Back To Top</a>
     <div class="popup-video">
         <div class="popup-wrap">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/KhCyot9FH70" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- <iframe id="popup-video" width="100%" height="100%" src="https://www.youtube.com/embed/KhCyot9FH70" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+            <iframe id="popup-video" width="100%" height="100%"  src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="close">x</div>
         </div>
 

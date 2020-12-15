@@ -511,6 +511,7 @@
             border: 1px solid $white-cl;
             border-radius: 50%;
             padding: 4px;
+            z-index: 10;
             img {
                 width: 100%;
             }
@@ -545,7 +546,6 @@
 
 
 /* about  */
-
 .about {
     .about_content {
         display: flex;
@@ -596,18 +596,6 @@
                     margin-left: 14px;
                     display: block;
                 }
-                // h2::before {
-                //     content: "";
-                //     width: 70px;
-                //     height: 2px;
-                //     position: absolute;
-                //     left: -50%;
-                //     top: 20%;
-                //     transform: translateX(50%);
-                //     background-color: $color-gray-2;
-                //     margin-left: 14px;
-                //     display: block;
-                // }
             }
         }
     }
@@ -620,7 +608,6 @@
 
 
 /* gallery  */
-
 .gallery {
     padding: 80px 0;
     background-color: $black-cl;
@@ -771,7 +758,6 @@
 
 
 /* photo  */
-
 .photo_content {
     display: flex;
     justify-content: space-between;
@@ -792,21 +778,28 @@
 
 // back to top
 #backToTop{
-    visibility: hidden;
+    // visibility: hidden;
+    position: fixed;
+    right: 20px;
+    bottom: 75px;
+    font-size: 10px;
+    background: black;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+    opacity: 0;
+    pointer-event: none; // chống giựt khi scroll
 
 }
 #backToTop.active{
-    visibility: visible;
-    position: fixed;
-    right: 20px;
-    bottom: 80px;
-    font-size: 8px;
-    background: black;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    color: white;
-    border-radius: 50%;
+    // visibility: visible;
+    opacity: 1;
+    pointer-event: auto;
+    transition: 0.3s;
+
 }

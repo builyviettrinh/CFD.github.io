@@ -23,11 +23,16 @@ header {
                         &:hover {
                             opacity: 0.5;
                         }
+                        &:active{
+                            opacity: 0.5;
+                            border-bottom: 2px solid gray;
+                        }
                     }
                 }
             }
         }
         .lang {
+            position:relative;
             .lang__current {
                 display: flex;
                 align-items: center;
@@ -41,6 +46,10 @@ header {
             }
             .dropdown-content{
                 display: none;
+                position: absolute;
+                bottom: 0;
+                right: 13px;
+                transform: translateY(100%);
                 a{
                     color: $white-cl;
                 }
