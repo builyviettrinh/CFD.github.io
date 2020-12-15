@@ -125,6 +125,8 @@ document.querySelectorAll(".menu a").forEach((e)=>{
   console.log(e);
 });
 
+document.query.
+
 // viet cho gon
 function getId(id) {
   return document.getElementById(id);
