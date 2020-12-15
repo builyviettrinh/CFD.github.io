@@ -7,8 +7,10 @@ getId("backToTop").addEventListener("click", function (event) {
 //hide/show button back to top
 var scrollPosition = 0;
 window.addEventListener("scroll", function () {
-  // so sánh giá trị position của e ( khoảng cách to top)
+ 
+ // so sánh giá trị position của e ( khoảng cách to top)
   if (document.body.getBoundingClientRect().top > scrollPosition) {
+
     getId("backToTop").classList.remove("active");
   } else {
     getId("backToTop").classList.add("active");
@@ -16,6 +18,7 @@ window.addEventListener("scroll", function () {
   // luu vi tri moi
   scrollPosition = document.body.getBoundingClientRect().top;
 });
+
 
 //  hieu ứng slider
 var slideIndex = 0;
@@ -30,7 +33,7 @@ function showSlidesAuto(n) {
     slides[i].style.display = "none";
   }
   slideIndex++;
-
+  
   if (slideIndex > slides.length) {
     slideIndex = 1;
   }
@@ -109,18 +112,20 @@ document.querySelector(".close").addEventListener("click", function () {
   document.querySelector(".popup-video").style.display = "none";
 });
 
-document.querySelectorAll(".menu a").forEach((e) => {
-  //e.preventDefault();
-  e.addEventListener("click", function (event) {
-    event.preventDefault();
-    let id_element = this.getAttribute("data-id");
-    console.log(id_element);
-    var posSec = document.querySelector("#" + id_element).offsetTop;
-    console.log(posSec);
-    window.scrollTo({ top: posSec - 80, behavior: "smooth" });
-  });
+document.querySelectorAll(".menu a").forEach((e)=>{
+    //e.preventDefault(); 
+    e.addEventListener("click",function(event){
+      event.preventDefault();
+      let id_element = this.getAttribute("data-id");
+      console.log(id_element);
+      var posSec = document.querySelector("#" +id_element).offsetTop;
+      console.log(posSec);
+        window.scrollTo({ top: posSec-80, behavior: "smooth" }); 
+    })
   console.log(e);
 });
+
+document.query.
 
 // viet cho gon
 function getId(idName) {
