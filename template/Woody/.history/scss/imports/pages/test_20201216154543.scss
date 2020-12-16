@@ -1,0 +1,15 @@
+.Products {
+    .products__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    @include tablet {
+
+    }
+    @include mobile {
+
+    }
+}

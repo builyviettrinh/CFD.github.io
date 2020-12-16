@@ -1,0 +1,24 @@
+.Products {
+    .products__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-item{
+            width: calc(50% - 25px);
+            padding-left: 100px;
+            padding-right: 50px;
+            &:first-child{
+                display: flex;
+            }
+        }
+    }
+
+
+    @include tablet {
+
+    }
+    @include mobile {
+        display: block;
+
+    }
+}
