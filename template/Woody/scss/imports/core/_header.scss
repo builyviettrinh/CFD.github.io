@@ -1,5 +1,8 @@
 header {
-    background-color: $black-cl;
+    // background-color: $black-cl;
+    &.bg_scroll{
+        background-color: $black-cl;
+    }
     @include full-fixed;
     height: 100px;
     z-index: 2;

@@ -5,8 +5,9 @@ getId("backToTop").addEventListener("click", function (event) {
 });
 
 //hide/show button back to top
-var scrollPosition = 0;
+/*var scrollPosition = 0;
 window.addEventListener("scroll", function () {
+  
   // so sánh giá trị position của e ( khoảng cách to top)
   if (document.body.getBoundingClientRect().top > scrollPosition) {
     getId("backToTop").classList.remove("active");
@@ -15,7 +16,25 @@ window.addEventListener("scroll", function () {
   }
   // luu vi tri moi
   scrollPosition = document.body.getBoundingClientRect().top;
-});
+});  */
+
+// cach 2
+var btt = document.querySelector("#backToTop");
+window.addEventListener("scroll",function(){
+  var scrollToTop = window.pageYOffset;
+  let sliderH = document.querySelector("#slider").clientHeight;
+    console.log(sliderH);
+  if(scrollToTop > sliderH){
+    btt.classList.add("active");
+    document.querySelector("header").classList.add("bg_scroll");
+  }else{
+    btt.classList.remove("active");
+    document.querySelector("header").classList.remove("bg_scroll");
+  }
+})
+
+
+
 
 //  hieu ứng slider
 var slideIndex = 0;
