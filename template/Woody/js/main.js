@@ -137,14 +137,20 @@ document.querySelectorAll(".menu a").forEach((e) => {
     console.log(id_element);
     var posSec = document.querySelector("#" + id_element).offsetTop;
     console.log(posSec);
+    let headerH = document.querySelector("header").clientHeight;
+    console.log(headerH);
 
     var posDiv = document.querySelector("#" + id_element).offsetWidth;
     console.log(posDiv);
 
-    window.scrollTo({ top: posSec - 80, behavior: "smooth" });
+   
+    window.scrollTo({ top: posSec - headerH, behavior: "smooth" });
   });
-  console.log(e);
 });
+
+// scroll and active
+function
+
 
 // viet cho gon
 function getId(idName) {

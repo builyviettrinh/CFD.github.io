@@ -1,0 +1,44 @@
+.Products {
+    .products__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-item{
+            width: calc(50% - 25px);
+            // padding-left: 100px;
+            // padding-right: 50px;
+            &:first-child{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            &:last-child{
+                width: calc(50% + 25px);
+                height: 330px;
+                position: relative;
+                overflow: hidden;
+                padding-right: 0;
+            }
+            >img{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 100%;
+            }
+            h2{
+                position: relative;
+                
+            }
+        }
+    }
+
+
+    @include tablet {
+
+    }
+    @include mobile {
+        display: block;
+
+    }
+}

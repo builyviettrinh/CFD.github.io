@@ -1,0 +1,13 @@
+.Products {
+    .products__content{
+        display: flex;
+    }
+
+
+    @include tablet {
+
+    }
+    @include mobile {
+
+    }
+}

@@ -1,0 +1,164 @@
+a {
+    color: $text-cl;
+    text-decoration: none;
+    display: block;
+}
+
+img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    // @include minW(1024px) {
+    //     max-width: initial;
+    // }
+}
+
+strong {
+    font-family: bb;
+}
+
+.-lv1 {
+    @include text(100px, b, 100px, $white-cl, none);
+    font-weight: normal;
+    margin: 0;
+    a {
+        @include text(100px, g, 100px, $white-cl, none);
+    }
+    @include tablet {}
+    @include mobile {}
+}
+
+// common, viet nhung cai chung
+.btn {
+    // color: #fff;
+    // font-family: Pxb;
+    border: 2px solid #fff;
+    // font-size: 20px;
+    padding: 16px 52px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    // text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s;
+    @include text(20px,Pxb,normal,$white-cl,uppercase);
+    /* position: relative; */
+}
+
+a.bnt_learnMore {
+    cursor: pointer;
+    transition: all 0.4s;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: pb;
+    font-size: 20px;
+    padding: 5px 0;
+    margin-top: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: relative;
+    i {
+        color: $yellow-cl;
+        padding-left: 10px;
+    }
+    &::before {
+        content: "";
+        width: 35px;
+        height: 2px;
+        background: $yellow-cl;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+    }
+    img {
+        position: relative;
+        @include transform(translateX(0px));
+        @include transition($t);
+    }
+    &:hover {
+        img {
+            @include transform(translateX(10px));
+            @include transition($t);
+        }
+    }
+}
+
+
+/* .btn:after{
+    content: "";
+    width: 100%;
+} */
+
+.btn:hover:after {
+    transform: translateX(-0%);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    color: #121314;
+    background-color: #fff;
+    transition: all 0.4s;
+}
+
+.hidden {
+    display: none;
+}
+
+.h2_title {
+    margin: 15px 0;
+    font-family: pb;
+    // @include styleText($fs-4, $black-cl, $fw-bold);
+    font-weight: 600;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+
+@include tablet {
+    .h2_title {
+        font-size: 28px;
+    }
+    // .space_p {
+    //     margin-bottom: 30px;
+    // }
+    a.btn {
+        color: #fff;
+        border: 1px solid #fff;
+        font-size: 14px;
+        padding: 8px 10px;
+        letter-spacing: 2px;
+    }
+}
+
+@include mobile {
+    .h2_title {
+        font-size: 20px;
+    }
+    .btn {
+        border: 1px solid #fff;
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+    a.btn {
+        color: #fff;
+        border: 1px solid #fff;
+        font-size: 12px;
+        padding: 6px 10px;
+        letter-spacing: 2px;
+    }
+    a.bnt_learnMore {
+        font-size: 16px;
+        padding: 4px 0;
+        letter-spacing: 1px;
+        i {
+            padding-left: 8px;
+        }
+        &::before {
+            width: 30px;
+            height: 2px;
+        }
+    }
+}
