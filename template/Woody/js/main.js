@@ -149,7 +149,7 @@ document.querySelectorAll(".menu a").forEach((e) => {
 });
 
 // scroll and active
-function
+
 
 
 // viet cho gon
