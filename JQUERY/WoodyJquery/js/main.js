@@ -18,6 +18,21 @@ window.addEventListener("scroll", function () {
   scrollPosition = document.body.getBoundingClientRect().top;
 });  */
 
+// let menus = document.querySelectorAll(selectors: ".menu li a");
+// let sections = [];
+// menus.forEach(callbackfn: function(e,index){
+//     let nameSection = e.getAttribute( qualifiedName: "href").replace(searchValue: "#", replaceValue: "");
+//     let section = document.querySelector(selectors: ".homepage > ." + nameSection );
+//     sections.push(section);
+
+//     e.addEventListener(type: "click", listener: function (event){
+//         event.preventDefault();
+//         let nameSection = this.getAttribute("href").replace(searchValue: "#", replaceValue: "");
+//         console.log(nameSection);
+
+//     })
+// });
+
 // cach 2
 var btt = document.querySelector("#backToTop");
 window.addEventListener("scroll",function(){
